@@ -1,0 +1,22 @@
+.pritcha{
+    Font-family: 'Lora', serif;
+  font-size: 30px;
+  letter-spacing: 1px;
+  line-height: 40px;
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  margin: 20px;
+  position: relative;
+  color: #000000;
+  background-image: url(../../assets/papirus.jpg);
+    background-size: cover;
+}
+@media(max-width:890px ){
+  
+  .pritcha{
+      padding:0;
+      margin: 0;
+
+  }
+}

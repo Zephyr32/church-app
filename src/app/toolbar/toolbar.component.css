@@ -1,0 +1,82 @@
+.toolbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    font-weight: 600;
+  }
+
+ .toolbar #ChurchLogo{
+   height: 60px;
+   width: 60px;
+   margin: 0 5px;
+ }
+
+  .toolbar #logo {
+    height: 50px;
+    margin: 0 5px;
+  }
+
+  .toolbar #logo:hover {
+    opacity: 0.8;
+  }
+  .logo-container{
+    display: flex;
+  }
+  @media(max-width:768px){
+    #ChurchLogo{
+      z-index: 1000;
+    }
+    .logo-container{
+      position: absolute;
+      right: 0;
+    }
+  }
+  .tooltip {
+    position:unset;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    transition-duration: 2s;
+    transition-property: all;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    opacity: 0;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+    transition: .55s opacity, .55s visibility;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+    transition-duration: 2s;
+    transition-property: all;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity:1;
+}

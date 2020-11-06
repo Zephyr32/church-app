@@ -1,0 +1,45 @@
+<div [hidden]="submitted">
+    <form #formModel="ngForm" (ngSubmit)="onSubmit()">
+ <div class="form-group">
+     <label for="district">District</label>
+     <input type="text" class="form-control" id="district"
+     required
+     minlength="4"
+     [(ngModel)]="model.district"  #district="ngModel" name="district">
+     <span *ngIf="district.errors?.minlength">Distric Too short</span>
+ </div>
+ <div class="form-group">
+    <label for="adress">Adress</label>
+    <input type="text" class="form-control" id="adress"
+    required
+     minlength="4"
+    [(ngModel)]="model.adress" name="adress">
+    <span *ngIf="formModel.errors?.required">Field is required</span>
+</div>
+<div class="form-group">
+    <label for="acolyte">Acolyte</label>
+    <input type="text" class="form-control" id="acolyte"
+    required
+     minlength="4"
+    [(ngModel)]="model.acolyte" name="acolyte">
+    <span *ngIf="formModel.errors?.required">Field is required</span>
+</div>
+<div class="form-group">
+    <label for="time">Time</label>
+    <input type="time" class="form-control" id="time"
+    required
+    [(ngModel)]="model.time" name="time">
+    <span *ngIf="formModel.errors?.required">Field is required</span>
+</div>
+<div class="form-group">
+    <label for="days">Days</label>
+    <select class="form-control" name="days" id="days" [(ngModel)]="model.days">
+        <option *ngFor="let day of days" [value]="day">{{day}}</option>
+    </select>
+    <span *ngIf="formModel.errors?.required">Field is required</span>
+</div>
+<div class="form-group">
+    <button type="submit" class="btn btn-success" [disabled]="!formModel.form.valid">Submit</button>
+</div>
+</form>
+</div>

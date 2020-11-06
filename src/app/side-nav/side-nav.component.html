@@ -1,0 +1,28 @@
+<div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar" *ngIf="sidenav" [@inOutAnimation]>
+        <div class="sidebar-header">
+            <h3>Vmeste Church</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li >
+                <a (click)="Home.emit()">Home</a>
+            </li>
+            <li>
+                <a (click)="Testimony.emit()" >Testymony</a>
+            </li>
+            <li>
+                <a (click)="Galerey.emit()" >Galerey</a>
+            </li>
+            <li>
+                <a (click)="Contacts.emit()">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+       <ng-content></ng-content>
+    </div>
+</div>
