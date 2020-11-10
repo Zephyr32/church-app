@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { from } from 'rxjs';
+import{Pritchi} from "./Pritchi";
 
 @Component({
   selector: 'app-main-page',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit {
-
-  constructor() { }
-
+  constructor() {
+this.pritcha=this.pritch.getRandompritch();
+  }
+   public pritch:Pritchi=new Pritchi();
+   pritcha:string;
   ngOnInit(): void {
   }
+
+  
 
 }
