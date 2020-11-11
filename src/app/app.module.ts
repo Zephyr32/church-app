@@ -22,6 +22,9 @@ import { DataService } from './data.service'
 import { from } from 'rxjs';
 import { HouseChurchComponent } from './house-church/house-church.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NgxSpinner } from 'ngx-spinner/lib/ngx-spinner.enum';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -47,7 +50,9 @@ import { FormsModule } from '@angular/forms';
     MatSidenavModule,
     MatIconModule,
     MatListModule, 
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    NgxSpinnerModule,
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

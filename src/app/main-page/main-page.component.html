@@ -6,8 +6,46 @@
 <div class="news">
     <h1>1 октября у Никиты и Данила День рождения!</h1>
 </div>
-<div class="video">
-    there is a video galerey
+<div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselIndicators" data-slide-to="2"></li>
+      </ol>
+    <div class="carousel-inner">
+        <div  class = "carousel-item card border-0 shadow active">
+            <iframe allowfullscreen="allowfullscreen" id="player" type="text/html" class="d-block w-100" [src]="videos[0].id.url"></iframe>
+            <div class = "card-body text-center">
+                <h5 class = "card-title mb-0">
+                <a> {{videos[0].snippet.title}}
+                </a> </h5>
+                </div>
+            </div>
+            <div  class = "carousel-item card border-0 shadow ">
+                <iframe allowfullscreen="allowfullscreen" id="player" type="text/html" class="d-block w-100" [src]="videos[1].id.url"></iframe>
+                <div class = "card-body text-center">
+                    <h5 class = "card-title mb-0">
+                    <a href="https://www.youtube.com/watch?v={{videos[1].id.videoId}}"> {{videos[1].snippet.title}}
+                    </a> </h5>
+                    </div>
+                </div>
+                <div  class = "carousel-item card border-0 shadow">
+                    <iframe allowfullscreen="allowfullscreen" id="player" type="text/html" class="d-block w-100" [src]="videos[2].id.url"></iframe>
+                    <div class = "card-body text-center">
+                        <h5 class = "card-title mb-0">
+                        <a href="https://www.youtube.com/watch?v={{videos[2].id.videoId}}"> {{videos[2].snippet.title}}
+                        </a> </h5>
+                        </div>
+                    </div>
+            <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+        </div>
 </div>
 <div class="photo">
    there is instphoto
